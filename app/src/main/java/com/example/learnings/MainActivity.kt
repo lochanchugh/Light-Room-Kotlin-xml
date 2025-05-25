@@ -1,6 +1,8 @@
 package com.example.learnings
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,21 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+
         }
+
+            var light = findViewById<Button>(R.id.lightmode)
+            var dark = findViewById<Button>(R.id.darkmode)
+            var m = findViewById<LinearLayout>(R.id.main)
+
+
+            light.setOnClickListener(){
+                m.setBackgroundColor(R.color.white)
+            }
+            dark.setOnClickListener(){
+                m.setBackgroundColor(R.color.black)
+            }
+
+
     }
 }
